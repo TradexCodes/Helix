@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HELIX — Adaptive Study Planner
 
-## Getting Started
+Helix is a web application that helps students prepare for exams by generating personalized study schedules based on their understanding of topics, available study time, and upcoming exam dates.
 
-First, run the development server:
+**Live Demo:** https://helix-gold.vercel.app
+
+## Features
+
+- **Exam Planning:** Create an exam with a deadline and study topics.
+- **Adaptive Scheduling:** Automatically allocate more study time to topics with lower mastery ratings.
+- **Progress Tracking:** Mark topics as completed and monitor overall progress.
+- **Dynamic Replanning:** Regenerate study schedules as topic mastery changes.
+- **Local Storage:** Save exam details and progress in the browser.
+- **Responsive Design:** Use Helix on desktop and mobile devices.
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Browser localStorage
+- Vercel
+
+## How It Works
+
+1. Create an exam and enter the topics you need to study.
+2. Rate your understanding of each topic.
+3. Set the number of minutes available for daily studying.
+4. Generate a personalized study plan.
+5. Mark topics complete and regenerate the schedule as you improve.
+
+Helix uses a weighted scheduling algorithm to prioritize weaker topics while keeping the total daily study time within the user's selected limit.
+
+## Run Locally
 
 ```bash
+git clone https://github.com/TradexCodes/helix.git
+cd helix
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Current Scope
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Helix currently supports one saved exam at a time. Exam details and progress are stored locally in the browser, while generated schedules can be rebuilt as needed.
 
-## Learn More
+## Links
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Live Application:** https://helix-gold.vercel.app
+- **GitHub Repository:** https://github.com/TradexCodes/helix
